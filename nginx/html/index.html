@@ -1,9 +1,73 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>나의 캡스톤 소개</title><link rel="stylesheet" href="style.css"><script defer src="app.js"></script></head>
-<body><main><header><p class="eyebrow">WEEK 5 · CAPSTONE</p><h1 id="project-title">TODO: 프로젝트 이름</h1><p>누적 조회수 <strong id="view-count">불러오는 중</strong></p></header>
-<!-- TODO: AI를 활용해 디자인과 소개 내용을 완성하세요. 아래 id는 API 연결에 사용하므로 유지하세요. -->
-<section><h2>프로젝트 소개</h2><p id="project-summary">TODO: 프로젝트 목적과 해결할 문제를 소개하세요.</p></section>
-<section><h2>주요 기능</h2><div id="project-features">TODO: 주요 기능을 구체적으로 작성하세요.</div></section>
-<section><h2>사용 기술</h2><p id="project-technology">TODO: 사용 기술과 역할을 적으세요.</p></section>
-<section><h2>팀 소개</h2><p>TODO: 팀원과 역할을 작성하세요.</p></section>
-<button id="download-button">소개 내용 다운로드 (.md)</button><button id="refresh-views">조회수 다시 확인</button><p id="message" class="result" aria-live="polite"></p>
-<footer><a href="/api/health">API 연결 확인</a><p>페이지를 열거나 새로고침하면 조회수가 증가합니다.</p></footer></main></body></html>
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Q:ROUND 프로젝트 소개</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+</head>
+
+<body>
+    <main>
+        <header>
+            <p class="eyebrow">WEEK 5 · CAPSTONE</p>
+            <h1 id="project-title">Q:ROUND - 현장 참여형 실시간 퀴즈 플랫폼</h1>
+            <p>누적 조회수 <strong id="view-count">불러오는 중</strong></p>
+        </header>
+
+        <section>
+            <h2>프로젝트 소개</h2>
+            <p id="project-summary">
+                Q:ROUND는 수업, 동아리 모임, 학과 행사에서 진행자와 참가자가 함께 사용하는
+                현장 참여형 실시간 퀴즈 플랫폼입니다. 진행자는 퀴즈 세트를 선택해 게임 방을
+                만들고, 참가자는 QR 코드 또는 방 코드와 닉네임을 이용해 참여합니다.
+                서버에서 문제 진행 상태와 답변, 점수 및 순위를 관리하여 여러 참가자가
+                동시에 접속해도 동일한 결과를 확인할 수 있도록 하는 것이 목표입니다.
+            </p>
+        </section>
+
+        <section>
+            <h2>주요 기능</h2>
+            <div id="project-features">
+                <p>진행자 로그인 및 퀴즈 세트 생성</p>
+                <p>QR 코드 또는 방 코드를 이용한 참가자 입장</p>
+                <p>객관식, OX, 이미지·실루엣 단서형 문제 진행</p>
+                <p>버저 입력 순서와 중복 답변의 서버 검증</p>
+                <p>실시간 점수판과 최종 순위 확인</p>
+                <p>연결이 끊긴 참가자의 현재 진행 상태 복구</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>사용 기술</h2>
+            <p id="project-technology">
+                화면 구성에는 React와 Vite를 사용하고, 서버는 Node.js와 Express로
+                구현합니다. 실시간 문제 전환과 점수 갱신에는 Socket.IO를 사용하며,
+                퀴즈와 참가 기록은 Supabase PostgreSQL에 저장합니다.
+                사용자 인증에는 Supabase Auth를 사용하고, 프론트엔드는 Vercel,
+                백엔드 서버는 Render 배포를 검토하고 있습니다.
+            </p>
+        </section>
+
+        <section>
+            <h2>팀 소개</h2>
+            <p>
+                이선호는 백엔드와 데이터베이스를 담당하며 API, 실시간 통신,
+                방 상태와 채점 기능을 구현합니다. 원진석은 프론트엔드를 담당하며
+                퀴즈 편집, 진행자 화면, 참가자 응답 화면과 결과 화면을 구현합니다.
+                시스템 통합과 기능 검증은 공동으로 진행합니다.
+            </p>
+        </section>
+
+        <button id="download-button">소개 내용 다운로드 (.md)</button>
+        <button id="refresh-views">조회수 다시 확인</button>
+        <p id="message" class="result" aria-live="polite"></p>
+
+        <footer>
+            <a href="/api/health">API 연결 확인</a>
+            <p>페이지를 열거나 새로고침하면 조회수가 증가합니다.</p>
+        </footer>
+    </main>
+</body>
+</html>
